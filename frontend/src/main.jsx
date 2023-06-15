@@ -4,7 +4,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import App from "./App.jsx"
 import "bootstrap/dist/css/bootstrap.min.css"
 import HomeScreen from "./screens/HomeScreen.jsx"
-// import "./index.css" -save for adding custom styles
+import "./assets/index.css"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
