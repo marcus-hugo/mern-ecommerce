@@ -1,7 +1,9 @@
 import express from "express"
-import products from "./data/products.js" // extesion required for own modules
+import dotenv from "dotenv"
+dotenv.config()
+import products from "./data/products.js" // extension required for own modules
 
-const port = 5000
+const port = process.env.PORT || 5000
 const app = express()
 
 app.get("/", (req, res) => {
