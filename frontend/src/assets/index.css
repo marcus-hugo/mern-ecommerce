@@ -1,5 +1,5 @@
 main {
-  min-height: 80vh;
+  min-height: calc(100vh - 138px);
 }
 
 .rating span {
