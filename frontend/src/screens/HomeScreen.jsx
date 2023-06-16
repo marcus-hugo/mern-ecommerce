@@ -5,8 +5,8 @@ import axios from "axios"
 
 const HomeScreen = () => {
   const [products, setProducts] = useState([])
-  // Will run once and set state with fetched data, even though state hase not changed.
-  // - on load? or on the homeScreeen?
+
+  // Will run once and set state with fetched data on load
   useEffect(() => {
     const fetchProducts = async () => {
       try {

@@ -8,6 +8,7 @@ const ProductScreen = () => {
   const { id: productId } = useParams() // get dynamic params from a url
   const [product, setProduct] = useState({})
 
+  // will run once on load and when product id changes
   useEffect(() => {
     const fetchProduct = async () => {
       try {
