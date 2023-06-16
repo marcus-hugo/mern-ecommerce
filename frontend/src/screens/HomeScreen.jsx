@@ -12,7 +12,7 @@ const HomeScreen = () => {
       try {
         const { data } = await axios.get("api/products")
         setProducts(data)
-        console.log("use effect ran")
+        console.log("Products useEffect ran")
       } catch (e) {
         console.log(e)
       }
