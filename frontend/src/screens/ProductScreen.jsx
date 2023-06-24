@@ -2,6 +2,8 @@ import { useParams, Link } from "react-router-dom"
 import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem } from "react-bootstrap"
 import Rating from "../components/Rating"
 import { useGetProductDetailsQuery } from "../slices/productsApiSlice"
+import Loader from "../components/Loader"
+import Message from "../components/Message"
 
 const ProductScreen = () => {
   const { id: productId } = useParams() // get dynamic params from a url
@@ -12,11 +14,11 @@ const ProductScreen = () => {
       <Link to="/" className="btn btn-light my-3">
         Go Back
       </Link>
-
+      <Message>Hello</Message>
       {isLoading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
-        <div>{error?.data?.error || error.error}</div>
+        <Message variant="danger">{error?.data?.message || error.error}</Message>
       ) : (
         <Row>
           <Col md={5}>
