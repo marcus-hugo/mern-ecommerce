@@ -1,3 +1,5 @@
+// "think of it as the parent slice"
+
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import { BASE_URL } from "../constants"
 
